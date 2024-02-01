@@ -2,7 +2,7 @@
 
 set -e
 
-./mvnw spring-boot:build-image -DskipTests
+./mvnw clean spring-boot:build-image -DskipTests
 
 IMAGE="docker.io/library/selfsigned:0.0.1-SNAPSHOT"
 PROBE="container CA certificates to JVM truststore"
