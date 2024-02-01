@@ -15,7 +15,7 @@ WITH_CERTS=$(docker run -it --rm \
 
 WITHOUT_CERTS=$(docker run -it --rm $IMAGE | grep -i "$PROBE")
 
-if [ "$WIT_CERTS" == "$WITHOUT_CERTS" ]; then
+if [ "$WITH_CERTS" == "$WITHOUT_CERTS" ]; then
   echo "Expect \"$WITH_CERTS\" to be different than \"$WITHOUT_CERTS\""
   echo "Test failed"
   exit 1
